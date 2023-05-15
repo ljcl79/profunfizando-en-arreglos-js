@@ -72,8 +72,30 @@
             const parametro3 = document.querySelector('#parametro3').value;
 
             if (metodo == 'slice') {
-
+                const arregloModificado = arregloOriginal.slice(parametro1, parametro2);
+                mostrarArreglo(arregloModificado.toString());
+            } else if (metodo == 'splice') {
+                arregloOriginal.splice(parametro1, parametro2, parametro3);
+                mostrarArreglo(arregloOriginal.toString());
+            } else if (metodo == 'map') {
+                const arregloModificado = arregloOriginal.map((item) => {
+                    if (item === '🍗')
+                        return '🥩';
+                    else if (item === '🍧')
+                        return '🍦';
+                    else
+                        return item;
+                });
+                mostrarArreglo(arregloModificado.toString());
+            } else if (metodo == 'forEach') {
+                let contador = 0;
+                arregloOriginal.forEach(item => {
+                    if (item === parametro1)
+                        contador++;
+                });
+                mostrarArreglo(contador.toString());
             }
+        
         }
 
         document.querySelector('#original').innerHTML = arregloOriginal.toString();
