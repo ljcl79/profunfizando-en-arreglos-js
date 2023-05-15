@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Métodos de Arreglos - 2</title>
+    <style>
+        div {
+            height: 5vh;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display:flex">
+        <div style="width: 15vw;">
+            Arreglo original:
+        </div>
+        <div id="original" style="width: 30vw;">
+
+        </div>
+    </div>
+    <div style="display:flex">
+        <div style="width: 15vw;">
+            Método:
+        </div>
+        <div style="width: 50vw;">
+            <select name="metodo" id="metodo">
+                <option value="slice">slice - Obtener un subarreglo</option>
+                <option value="splice">splice - Eliminar y Agregar elemento en cualquier posición</option>
+                <option value="map">map - Transformar el arreglo en un nuevo arreglo</option>
+                <option value="forEach">forEach - Recorrer el arreglo y ejecutar operaciones para cada elemento</option>
+            </select>
+        </div>
+        <div style="display:flex;flex-direction: column;">
+            <div style="width: 20vw;">
+                <input id="parametro1" placeholder="Parámetro 1" />
+            </div>
+            <div style="width: 20vw;">
+                <input id="parametro2" placeholder="Parámetro 2" />
+            </div>
+            <div style="width: 20vw;">
+                <input id="parametro3" placeholder="Parámetro 3" />
+            </div>
+            <div style="width: 40vw;">
+                <button onclick="ejecutaMetodo()">Ejecutar operación</button>
+            </div>
+        </div>
+    </div>
+    <div style="display:flex">
+        <div style="width: 10vw;">
+            Resultado:
+        </div>
+        <div id="resultado" style="width: 30vw;">
+
+        </div>
+    </div>
+    <script>
+        const arregloOriginal = ['🍔', '🍕', '🌮', '🍗', '🍧', '🎂', '🍪', '🎂', '🍮'];
+
+        function mostrarArreglo(valor) {
+            document.querySelector('#resultado').innerHTML = valor;
+        }
+
+        function ejecutaMetodo() {
+            const metodo = document.querySelector('#metodo').value;
+            const parametro1 = document.querySelector('#parametro1').value;
+            const parametro2 = document.querySelector('#parametro2').value;
+            const parametro3 = document.querySelector('#parametro3').value;
+
+            if (metodo == 'slice') {
+
+            }
+        }
+
+        document.querySelector('#original').innerHTML = arregloOriginal.toString();
+    </script>
+</body>
+
+</html>
